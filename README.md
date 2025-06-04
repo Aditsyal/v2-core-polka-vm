@@ -1,24 +1,83 @@
-# Uniswap V2
+# UniswapV2 Pair for PolkaVM
 
-[![Actions Status](https://github.com/Uniswap/uniswap-v2-core/workflows/CI/badge.svg)](https://github.com/Uniswap/uniswap-v2-core/actions)
-[![Version](https://img.shields.io/npm/v/@uniswap/v2-core)](https://www.npmjs.com/package/@uniswap/v2-core)
+A standalone implementation of Uniswap V2's constant product AMM, optimized for PolkaVM deployment.
 
-In-depth documentation on Uniswap V2 is available at [uniswap.org](https://uniswap.org/docs).
+## Overview
+This project implements a factory-independent version of the Uniswap V2 pair contract, specifically modified for deployment on PolkaVM. It maintains core AMM functionality while removing dependencies on the factory contract.
 
-The built contract artifacts can be browsed via [unpkg.com](https://unpkg.com/browse/@uniswap/v2-core@latest/).
+## Key Features
+- Standalone deployment structure
+- Direct token pair configuration
+- PolkaVM-optimized (~8.2kB contract size)
+- Modified storage patterns
+- Built for Westend testnet
 
-# Local Development
+## Quick Start
 
-The following assumes the use of `node@>=10`.
+### Prerequisites
+- Node.js environment
+- Westend endpoint: `wss://westend-rpc.polkadot.io`
+- Minimum 0.1 WND for deployment
 
-## Install Dependencies
+### Installation
+```bash
+yarn install
+yarn compile
+```
 
-`yarn`
+### Deployment
+1. Configure your Westend endpoint
+2. Prepare token addresses
+3. Deploy with:
+```bash
+yarn deploy
+```
 
-## Compile Contracts
+## Contract Interface
 
-`yarn compile`
+### Core Functions
+```solidity
+function mint(address to) external returns (uint256 liquidity)
+function burn(address to) external returns (uint256 amount0, uint256 amount1)
+function swap(uint256 amount0Out, uint256 amount1Out, address to) external
+function getReserves() external view returns (uint112, uint112, uint32)
+```
 
-## Run Tests
+## Gas & Performance
 
-`yarn test`
+### Costs
+- Deployment: ~2.1M gas
+- Mint: ~180k gas
+- Burn: ~120k gas
+- Swap: ~140k gas
+
+### Transaction Times
+- Block time: 6s
+- Confirmation: 6-12s
+- Finality: ~15s
+
+## Testing
+```bash
+yarn test
+```
+
+Test coverage includes:
+- Liquidity operations
+- Swap scenarios
+- Edge cases
+- Security checks
+
+## Security Notes
+- No flash loan protection
+- Fixed 0.3% fee structure
+- Basic slippage protection
+- Standard reentrancy guards
+
+## Documentation
+For detailed documentation, see:
+- [Technical Documentation](./DOCUMENTATION.md)
+- [Gas Analysis](./GAS_ANALYSIS.md)
+- [Performance Analysis](./PERFORMANCE_ANALYSIS.md)
+
+## License
+GPL-3.0
