@@ -2,6 +2,9 @@
 
 A standalone implementation of Uniswap V2's constant product AMM, optimized for PolkaVM deployment.
 
+
+Original contract: [https://github.com/Uniswap/v2-core](url)
+
 ## Overview
 This project implements a factory-independent version of the Uniswap V2 pair contract, specifically modified for deployment on PolkaVM. It maintains core AMM functionality while removing dependencies on the factory contract.
 
