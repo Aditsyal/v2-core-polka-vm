@@ -1,17 +1,18 @@
-pragma solidity =0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity =0.8.28;
 
-// a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
-
+// SafeMath is mostly unnecessary in 0.8.28 as it includes built-in overflow checks
+// Only keeping what's absolutely necessary for backwards compatibility
 library SafeMath {
     function add(uint x, uint y) internal pure returns (uint z) {
-        require((z = x + y) >= x, 'ds-math-add-overflow');
+        z = x + y;
     }
 
     function sub(uint x, uint y) internal pure returns (uint z) {
-        require((z = x - y) <= x, 'ds-math-sub-underflow');
+        z = x - y;
     }
 
     function mul(uint x, uint y) internal pure returns (uint z) {
-        require(y == 0 || (z = x * y) / y == x, 'ds-math-mul-overflow');
+        z = x * y;
     }
 }

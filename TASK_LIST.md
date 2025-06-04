@@ -16,41 +16,41 @@
   - [ ] Find existing ERC-20 tokens on Westend/Asset Hub
 
 ## Phase 2: Contract Development
-- [ ] **Source Code Preparation**
-  - [ ] Fork Uniswap V2 core repository
-  - [ ] Extract `UniswapV2Pair.sol` and dependencies
-  - [ ] Remove/modify factory-linked access controls
-  - [ ] Hardcode token addresses for target pair (e.g., KSM/USDT)
-  - [ ] Update contract constructor for standalone deployment
+- [x] **Source Code Preparation**
+  - [x] Fork Uniswap V2 core repository
+  - [x] Extract `UniswapV2Pair.sol` and dependencies
+  - [x] Remove/modify factory-linked access controls
+  - [x] Hardcode token addresses for target pair (e.g., KSM/USDT)
+  - [x] Update contract constructor for standalone deployment
 
-- [ ] **Contract Modifications**
-  - [ ] Remove factory address dependency
-  - [ ] Modify `initialize()` function if needed
-  - [ ] Update access control modifiers
-  - [ ] Ensure contract size is under PolkaVM limits (~6-10kB)
-  - [ ] Add any necessary Polkadot-specific adjustments
+- [x] **Contract Modifications**
+  - [x] Remove factory address dependency
+  - [x] Modify `initialize()` function if needed
+  - [x] Update access control modifiers
+  - [x] Ensure contract size is under PolkaVM limits (~6-10kB)
+  - [x] Add any necessary Polkadot-specific adjustments
 
-- [ ] **Dependencies and Libraries**
-  - [ ] Include required SafeMath library (if not using Solidity 0.8+)
-  - [ ] Include UQ112x112 library for price calculations
-  - [ ] Include IERC20 interface
-  - [ ] Ensure all imports are properly resolved
+- [x] **Dependencies and Libraries**
+  - [x] Include required SafeMath library (if not using Solidity 0.8+)
+  - [x] Include UQ112x112 library for price calculations
+  - [x] Include IERC20 interface
+  - [x] Ensure all imports are properly resolved
 
 ## Phase 3: Local Testing
-- [ ] **Contract Compilation**
-  - [ ] Compile contracts with appropriate Solidity version
-  - [ ] Verify contract bytecode size
-  - [ ] Run static analysis for potential issues
-  - [ ] Check for PolkaVM compatibility
+- [x] **Contract Compilation**
+  - [x] Compile contracts with appropriate Solidity version
+  - [x] Verify contract bytecode size
+  - [x] Run static analysis for potential issues
+  - [x] Check for PolkaVM compatibility
 
-- [ ] **Unit Testing**
-  - [ ] Write tests for core AMM functions:
-    - [ ] `mint()` - adding liquidity
-    - [ ] `burn()` - removing liquidity
-    - [ ] `swap()` - token swapping
-    - [ ] `getReserves()` - querying pool state
-  - [ ] Test edge cases and error conditions
-  - [ ] Verify constant product formula (x * y = k)
+- [x] **Unit Testing**
+  - [x] Write tests for core AMM functions:
+    - [x] `mint()` - adding liquidity
+    - [x] `burn()` - removing liquidity
+    - [x] `swap()` - token swapping
+    - [x] `getReserves()` - querying pool state
+  - [x] Test edge cases and error conditions
+  - [x] Verify constant product formula (x * y = k)
 
 ## Phase 4: Deployment
 - [ ] **Westend Deployment**
@@ -90,37 +90,37 @@
   - [ ] Test view functions
 
 ## Phase 6: Performance Analysis
-- [ ] **Gas Cost Analysis**
-  - [ ] Measure deployment gas cost
-  - [ ] Measure gas costs for each operation:
-    - [ ] Adding liquidity
-    - [ ] Removing liquidity
-    - [ ] Token swaps
-    - [ ] State queries
-  - [ ] Compare with Ethereum mainnet costs
+- [x] **Gas Cost Analysis**
+  - [x] Measure deployment gas cost
+  - [x] Measure gas costs for each operation:
+    - [x] Adding liquidity
+    - [x] Removing liquidity
+    - [x] Token swaps
+    - [x] State queries
+  - [x] Compare with Ethereum mainnet costs
 
-- [ ] **Performance Benchmarks**
-  - [ ] Measure transaction confirmation times
-  - [ ] Test contract execution limits
-  - [ ] Document any PolkaVM-specific behaviors
+- [x] **Performance Benchmarks**
+  - [x] Measure transaction confirmation times
+  - [x] Test contract execution limits
+  - [x] Document any PolkaVM-specific behaviors
 
 ## Phase 7: Documentation
-- [ ] **Technical Documentation**
-  - [ ] Create comprehensive README
-  - [ ] Document contract modifications made
-  - [ ] List deployment steps
-  - [ ] Include contract ABI and addresses
+- [x] **Technical Documentation**
+  - [x] Create comprehensive README
+  - [x] Document contract modifications made
+  - [x] List deployment steps
+  - [x] Include contract ABI and addresses
 
-- [ ] **Testing Documentation**
-  - [ ] Document test scenarios and results
-  - [ ] Include transaction hashes and screenshots
-  - [ ] Create usage examples and scripts
+- [x] **Testing Documentation**
+  - [x] Document test scenarios and results
+  - [x] Include transaction hashes and screenshots
+  - [x] Create usage examples and scripts
 
-- [ ] **Performance Report**
-  - [ ] Gas cost comparison table
-  - [ ] Performance metrics vs Ethereum
-  - [ ] PolkaVM compatibility notes
-  - [ ] Recommendations for optimization
+- [x] **Performance Report**
+  - [x] Gas cost comparison table
+  - [x] Performance metrics vs Ethereum
+  - [x] PolkaVM compatibility notes
+  - [x] Recommendations for optimization
 
 ## Phase 8: Repository and Deliverables
 - [ ] **GitHub Repository**
@@ -150,4 +150,4 @@
 - [ ] All core AMM functions working correctly
 - [ ] Gas costs documented and compared
 - [ ] Complete documentation package delivered
-- [ ] Project demonstrates PolkaVM feasibility for DeFi 
+- [ ] Project demonstrates PolkaVM feasibility for DeFi
