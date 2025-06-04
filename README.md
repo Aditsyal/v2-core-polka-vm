@@ -1,4 +1,4 @@
-# UniswapV2 Pair for PolkaVM
+# UniswapV2 Smart Contract Pair for PolkaVM
 
 A standalone implementation of Uniswap V2's constant product AMM, optimized for PolkaVM deployment.
 
