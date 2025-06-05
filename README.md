@@ -78,7 +78,6 @@ Test coverage includes:
 
 ## Documentation
 For detailed documentation, see:
-- [Technical Documentation](./DOCUMENTATION.md)
 - [Gas Analysis](./GAS_ANALYSIS.md)
 - [Performance Analysis](./PERFORMANCE_ANALYSIS.md)
 
